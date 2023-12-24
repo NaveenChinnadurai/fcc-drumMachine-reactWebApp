@@ -1,0 +1,20 @@
+.toggle-div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.toggle{
+    background-color: black;
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+}
+.toggle-btn{
+    background-color: red;
+    height: 19px;
+    position: absolute;
+    width: 20px;
+}
