@@ -1,16 +1,24 @@
 import './App.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import TurnOffOn from './compo/turnOffOn'
-import audio1 from './assets/Heater-1.mp3'
+import {keys} from './script.js'
+
 function App() {
   const [powerState, setPowerState] = useState(false)
   const [style1, setStyle1] = useState({})
   const [style2, setStyle2] = useState({})
   const [displayText, setDisplayText] = useState("")
   const [bankText, setBankText] = useState("")
-
+  var audio=new Audio()
   const handleButtonClick = (e) => {
     if (powerState) {
+      for (let i = 0; i < keys.length; i++) {
+        if(e.target.value===keys[i].name){
+          audio.src=keys[i].audioUrl
+          break
+        }
+      }
+      audio.play()
       setDisplayText(e.target.value)
     }
   }
@@ -53,7 +61,6 @@ function App() {
       setDisplayText("Volume " + volume)
     }
   };
-  const [audio] = useState(new Audio(audio1))
   return (
     <div className="app-wrapper">
       <div className="music-container">
@@ -81,6 +88,7 @@ function App() {
             style={style1}
           />
           <div className='musicname-container'>{displayText}</div>
+          <audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" className='audio'/>
           <input type="range" name="volume" min={0} max={101} className='vol-range' onChange={handleVolumeChange} />
           <TurnOffOn
             title='Bank'

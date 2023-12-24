@@ -31,6 +31,7 @@ button{
     font-weight: 600;
     border: none;
     cursor: pointer;
+    color: white;
     background-color: rgb(90, 61, 194);
     border-radius: 10px;
 }
@@ -53,11 +54,15 @@ button{
     font-weight: 600;
     background-color: rgb(177, 146, 250);
 }
+
 .vol-range{
     width: 80%;
     margin: 10px;
 }
 @media screen and (max-width:576px) {
+    .app-wrapper{
+        background-color: rgb(132, 88, 252);
+    }
     .music-container{
         flex-direction: column-reverse;
         align-items: center;
