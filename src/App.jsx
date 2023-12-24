@@ -1,5 +1,5 @@
 import './App.css'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import TurnOffOn from './compo/turnOffOn'
 import audio1 from './assets/Heater-1.mp3'
 function App() {
@@ -10,7 +10,6 @@ function App() {
   const [bankText, setBankText] = useState("")
 
   const handleButtonClick = (e) => {
-    audio.play
     if (powerState) {
       setDisplayText(e.target.value)
     }
@@ -47,24 +46,14 @@ function App() {
   }
   const [volume, setVolume] = useState(80);
 
-  useEffect(() => {
-    const audioContext = new (window.AudioContext)();
-    console.log(volume)
-    const gainNode = audioContext.createGain();
-    gainNode.gain.value = volume / 100; // Set initial volume
-
-    gainNode.connect(audioContext.destination);
-    return () => {
-      gainNode.disconnect();
-      audioContext.close();
-    };
-  }, [volume]);
-
   const handleVolumeChange = (event) => {
-    const newVolume = parseInt(event.target.value, 10);
-    setVolume(newVolume);
+    if (powerState) {
+      const newVolume = parseInt(event.target.value, 10);
+      setVolume(newVolume);
+      setDisplayText("Volume " + volume)
+    }
   };
-  const [audio]=useState(new Audio(audio1))
+  const [audio] = useState(new Audio(audio1))
   return (
     <div className="app-wrapper">
       <div className="music-container">
@@ -92,7 +81,7 @@ function App() {
             style={style1}
           />
           <div className='musicname-container'>{displayText}</div>
-          <input type="range" name="volume" className='vol-range' onChange={handleVolumeChange}/>
+          <input type="range" name="volume" min={0} max={101} className='vol-range' onChange={handleVolumeChange} />
           <TurnOffOn
             title='Bank'
             handleClick={handleBankBtnClick}

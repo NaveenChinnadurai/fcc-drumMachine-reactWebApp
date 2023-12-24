@@ -57,16 +57,11 @@ button{
     width: 80%;
     margin: 10px;
 }
-.vol-range::-webkit-slider-runnable-track{
-    border-radius: 0;
-}
-.vol-range::-webkit-slider-runnable-thumb{
-    background-color: red;
-}
 @media screen and (max-width:576px) {
     .music-container{
         flex-direction: column-reverse;
         align-items: center;
         padding: 0;
+        background-color: rgb(78, 5, 151);
     }
 }
