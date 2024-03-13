@@ -1,0 +1,9 @@
+.random-quote-app {
+  height: 90vh;
+  flex-direction: column;
+}
+
+.random-quote-app>p {
+  margin: 15px 0;
+  color: white;
+}

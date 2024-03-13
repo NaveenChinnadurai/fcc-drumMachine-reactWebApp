@@ -1,0 +1,26 @@
+.display-container{
+    padding: 20px 30px;
+    border: 6px solid rgb(99, 51, 153);
+    border-radius: 30px;
+    min-width: 330px;
+    min-height: 100px;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: column;
+    align-items: center;
+}
+.display-container>h2{
+    font-size: 60px;
+}
+
+@media screen and (max-width:576px) {
+    .display-container{
+        border: none;
+        padding: 0;
+        border-radius: 0;
+    }
+    .display-container>h1{
+        font-size: 30px;
+        color: rgb(59, 0, 126);
+    }
+}
