@@ -1,0 +1,75 @@
+#quote-box{
+    background-color: white;
+    height: 50vh;
+    width: 50vw;
+    min-height: 400px;
+    min-width: 250px;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.quote-text-div{
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+}
+#quotes{
+    font-size: 40px;
+    rotate: 180deg;
+    margin-right: 5px;
+}
+#text{
+    text-align: center;
+}
+#author{
+    text-align: right;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+.quote-box-end{
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between !important;
+}
+.icon{
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px 8px;
+}
+#new-quote{
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+@media screen and (max-width:576px) {
+    #quote-box{
+        padding: 0;
+        min-height: 300px;
+    }
+    .quote-text-div{
+        padding: 10px;
+    }
+    #text{
+        font-size: 20px ;
+    }
+    #quotes{
+        font-size: 25px;
+    }
+    #author{
+        font-size: 15px;
+        padding: 0;
+    }
+    .icon{
+        font-size: 16px;
+        padding: 4px;
+    }
+    #new-quote{
+        padding: 5px 8px;
+        font-size:14px;
+    }
+}
