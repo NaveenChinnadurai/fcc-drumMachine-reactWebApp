@@ -62,13 +62,14 @@ button{
 @media screen and (max-width:576px) {
     .drum-wrapper{
         padding: 20px 0;
-        height: fit-content;
+        min-height: 80vh;
         background-color: rgb(132, 88, 252);
     }
     .music-container{
         flex-direction: column-reverse;
         align-items: center;
         padding: 0;
+        width: 90vw;
         background-color: rgb(78, 5, 151);
     }
 }

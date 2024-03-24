@@ -3,7 +3,7 @@
     height: 50vh;
     width: 50vw;
     min-height: 400px;
-    min-width: 250px;
+    min-width: 300px;
     padding: 20px;
     flex-direction: column;
     border-radius: 5px;
@@ -49,6 +49,7 @@
 @media screen and (max-width:576px) {
     #quote-box{
         padding: 0;
+        width: 90vw;
         min-height: 300px;
     }
     .quote-text-div{

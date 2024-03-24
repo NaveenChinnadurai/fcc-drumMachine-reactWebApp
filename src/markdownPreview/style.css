@@ -12,6 +12,8 @@
     display: flex;
     border: 1px solid black;
     width: 100%;
+    height: 90%;
+    overflow: hidden;
 }
 .editor-div {
     width: 50%;
@@ -41,7 +43,7 @@
 }
 @media screen and (max-width:576px) {
     .markdown-div{
-        height: auto;
+        height: fit-content;
         padding:10px;
     }
     .markdown-div>h1{
